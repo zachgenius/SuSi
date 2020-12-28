@@ -22,5 +22,10 @@ either use it as-is to reproduce the results from our paper, or extend it to mee
 Finally, start the machine learner:
 
 ```
-java -cp lib/weka.jar:soot-trunk.jar:soot-infoflow.jar:soot-infoflow-android.jar:SuSi.jar de.ecspride.sourcesinkfinder.SourceSinkFinder android.jar permissionMethodWithLabel.pscout out.pscout 
+# Build:
+ant compile
+ant jar
+
+# Run:
+java -cp lib/asm-analysis.jar:lib/asm-tree.jar:lib/asm-util.jar:lib/asm-commons.jar:lib/asm.jar:lib/failureaccess.jar:lib/guava.jar:lib/slf4j.jar:lib/weka.jar:lib/soot-trunk.jar:lib/soot-infoflow.jar:lib/soot-infoflow-android.jar:lib/axml.jar:build/jar/SuSi.jar de.ecspride.sourcesinkfinder.SourceSinkFinder android.jar permissionMethodWithLabel.pscout out.pscout 
 ```
